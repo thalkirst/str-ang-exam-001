@@ -1,0 +1,28 @@
+<div class="container d-flex flex-wrap mt-3">
+    <form class="form mb-3">
+      <div class="text-center mb-1">Enter text to filter by name...</div>
+      <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2" type="text">
+    </form>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th (click)="onColumnSelect('id')">#</th>
+                    <th (click)="onColumnSelect('name')">Name</th>
+                    <th (click)="onColumnSelect('superPower')">Superpower</th>
+                    <th (click)="onColumnSelect('address')">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroList | filter:phrase | sorter:sorterKey">
+                    <td>{{ hero.id }}</td>
+                    <td>{{ hero.name }}</td>
+                    <td>{{ hero.superPower }}</td>
+                    <td>{{ hero.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

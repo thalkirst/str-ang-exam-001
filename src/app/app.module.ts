@@ -2,9 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HeroesComponent } from './pages/heroes/heroes.component';
+import { NavigationComponent } from './pages/navigation/navigation.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     AppComponent,
     HomeComponent,
     HeroesComponent,
-    NavigationComponent
+    NavigationComponent,
+    FilterPipe,
+    SorterPipe
   ],
   imports: [
     BrowserModule,
