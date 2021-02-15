@@ -1,1 +1,1 @@
-3. részvizsga Angular gyakorló feladata.
+3. részvizsga Angular gyakorló feladata.git commit -m "first commit"
